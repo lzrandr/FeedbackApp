@@ -1,0 +1,49 @@
+﻿@model FeedbackWeb.Models.FeedbackViewModel
+
+
+@{
+    //  ViewData["Title"] = "CreatePost";
+    Layout = null;
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+
+</head>
+<body>
+    <div class="container">
+        <h1 class="main-titel">Add a Feedback to the Course</h1>
+        <form method="post" enctype="multipart/form-data" asp-action="Create">
+            <div asp-validation-summary="All"></div>
+            <div class="form-field">
+                <label asp-for="Course"></label>
+                <select asp-for="CourseId" asp-items="ViewBag.CourseId">
+                    <option selected="selected" value="">Select</option>
+                </select>
+                <span asp-validation-for="CourseId"></span>
+            </div>
+            <div class="form-field">
+                <label asp-for="TheFeedback"></label>
+                <textarea asp-for="TheFeedback"></textarea>
+                <span asp-validation-for="TheFeedback"></span>
+            </div>
+            <div class="form-field">
+                <label asp-for="FeedbackWriterName"></label>
+                <input asp-for="FeedbackWriterName" />
+                <span asp-validation-for="FeedbackWriterName"></span>
+            </div>
+            <div class="form-field">
+                <label asp-for="FeedbackWriterEmail"></label>
+                <input asp-for="FeedbackWriterEmail" />
+                <span asp-validation-for="FeedbackWriterEmail"></span>
+            </div>   
+            <div class="form-field">
+                <input type="submit" value="Submit" />
+            </div>
+        </form>
+    </div>
+</body>
+</html>

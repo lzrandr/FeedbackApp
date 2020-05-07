@@ -1,0 +1,23 @@
+﻿@using FeedbackWeb.Models
+@model IEnumerable<CourseViewModel>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<div>
+    <ul style="display:inline">
+        @foreach (var courseitem in Model)
+        {
+
+            <li>@courseitem.CourseName</li>
+            foreach (var feedbackitem in courseitem.FeedBacks)
+            {
+                feedbackitem.TheFeedback.ToString();
+            }
+        }
+    </ul>
+
+    
+</div>
