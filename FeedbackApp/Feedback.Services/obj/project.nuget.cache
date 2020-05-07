@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "Gw1CzGNQCVTqo3MyBkyU9ZMyOUeoaeOyU1PBgjV+b+3SqSurR9WtBf6y3WKySsy1vAgb6Eugz7/poINjSaCZ8g==",
+  "success": true,
+  "projectFilePath": "D:\\GIT\\FeedbackApp\\FeedbackApp\\Feedback.Services\\Feedback.Services.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\QAZ\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\QAZ\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,12 @@
+D:\GIT\FeedbackApp\FeedbackApp\Feedback.Data\bin\Debug\netstandard2.0\Feedback.Data.deps.json
+D:\GIT\FeedbackApp\FeedbackApp\Feedback.Data\bin\Debug\netstandard2.0\Feedback.Data.dll
+D:\GIT\FeedbackApp\FeedbackApp\Feedback.Data\bin\Debug\netstandard2.0\Feedback.Data.pdb
+D:\GIT\FeedbackApp\FeedbackApp\Feedback.Data\bin\Debug\netstandard2.0\Feedback.Domain.dll
+D:\GIT\FeedbackApp\FeedbackApp\Feedback.Data\bin\Debug\netstandard2.0\Feedback.Domain.pdb
+D:\GIT\FeedbackApp\FeedbackApp\Feedback.Data\obj\Debug\netstandard2.0\Feedback.Data.csprojAssemblyReference.cache
+D:\GIT\FeedbackApp\FeedbackApp\Feedback.Data\obj\Debug\netstandard2.0\Feedback.Data.csproj.CoreCompileInputs.cache
+D:\GIT\FeedbackApp\FeedbackApp\Feedback.Data\obj\Debug\netstandard2.0\Feedback.Data.AssemblyInfoInputs.cache
+D:\GIT\FeedbackApp\FeedbackApp\Feedback.Data\obj\Debug\netstandard2.0\Feedback.Data.AssemblyInfo.cs
+D:\GIT\FeedbackApp\FeedbackApp\Feedback.Data\obj\Debug\netstandard2.0\Feedback.Data.csproj.CopyComplete
+D:\GIT\FeedbackApp\FeedbackApp\Feedback.Data\obj\Debug\netstandard2.0\Feedback.Data.dll
+D:\GIT\FeedbackApp\FeedbackApp\Feedback.Data\obj\Debug\netstandard2.0\Feedback.Data.pdb
