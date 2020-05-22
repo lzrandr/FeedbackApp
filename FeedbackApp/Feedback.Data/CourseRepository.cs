@@ -57,9 +57,16 @@ namespace Feedback.Data
         }
         public IQueryable<Teacher> PopulateTeachersDropDownList()
         {
-            var teachersQuery = from b in _dbcontext.Teachers
-                               orderby b.TeacherName
-                               select b;
+            //var teachersQuery = from b in _dbcontext.Teachers
+            //                   orderby b.TeacherName
+            //                   select b;
+            //return teachersQuery;
+
+            var teachersQuery = from Teacher in _dbcontext.Teachers
+                                join CourseTemp in _dbcontext.Courses on Teacher.TeacherId equals CourseTemp.TeacherId into tempJoin
+                                from Course in tempJoin.DefaultIfEmpty()
+                                where Course.CourseId == null
+                                select Teacher;
             return teachersQuery;
         }
     }

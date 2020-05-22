@@ -1,6 +1,7 @@
 using AutoMapper;
 using Feedback.Data;
 using Feedback.Domain.Models;
+using FeedbackWeb.Areas.Admin.Controllers;
 using FeedbackWeb.Controllers;
 using Moq;
 using System;
