@@ -8,7 +8,11 @@ namespace Feedback.Domain.Entities
 {
     public partial class FeedBack
     {
-    
+        public FeedBack()
+        {
+            
+        }
+
         [Key]
         public int FeedbackId { get; set; }
 
@@ -18,15 +22,18 @@ namespace Feedback.Domain.Entities
         public virtual Course Course { get; set; }
 
         [Required]
+        [Display(Name = "Student Name")]
+        [MaxLength(50)]
         public string FeedbackWriterName { get; set; }
         [Required]
         [EmailAddress]
+        [Display(Name = "Student Email")]
+        [MaxLength(50)]
         public string FeedbackWriterEmail { get; set; }
         [Required(ErrorMessage = "Please enter a feedback")]
-        [MaxLength(1500)]
+        [MaxLength(1000)]
         [Display(Name = "Feedback:")]
         public string TheFeedback { get; set; }
-        [Required]
-        public DateTime Date { get { return DateTime.Now; } }
+       
     }
 }

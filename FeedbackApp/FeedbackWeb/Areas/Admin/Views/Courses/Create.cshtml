@@ -1,0 +1,58 @@
+﻿@model Feedback.Domain.Models.CourseViewModel
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Add a new Course</title>
+
+</head>
+
+<body>
+    <div class="border cointainer" style="padding:30px;">
+        <h1 class="main-titel">Add a new Course</h1>
+        <form method="post" enctype="multipart/form-data" asp-action="Create">
+
+            <div asp-validation-summary="All"></div>
+            <div class="form-group row">
+                <div class="col-3">
+                    <label asp-for="Teacher"></label>
+                </div>
+                <div class="col-6">
+                    <select asp-for="TeacherId" asp-items="ViewBag.TeacherId">
+                        <option selected="selected" value="">Select</option>
+                    </select>
+                    <span asp-validation-for="TeacherId"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-3">
+                    <label asp-for="CourseName">Course Name</label>
+                </div>
+                <div class="col-6">
+                    <input asp-for="CourseName" />
+                    <span asp-validation-for="CourseName"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-3">
+                    <label asp-for="CourseDescription" class="control-label"></label>
+                </div>
+                <div class="col-6">
+                    <input asp-for="CourseDescription" class="form-control" />
+                    <span asp-validation-for="CourseDescription" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-3 offset-3">
+                    <input type="submit" value="Submit" class="btn btn-primary form-control" />
+                </div>
+                <div class="col-3">
+                    <a asp-action="Index" class="btn btn-success form-control">Back to List</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

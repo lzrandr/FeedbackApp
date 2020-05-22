@@ -12,6 +12,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using static Feedback.Data.CourseRepository;
 
 namespace FeedbackWeb
 {
@@ -27,19 +28,23 @@ namespace FeedbackWeb
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllersWithViews();
-
+          
+            services.AddControllersWithViews().AddRazorRuntimeCompilation();
             services.AddDbContext<FeedbackContext>(options =>
             {
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"), b => b.MigrationsAssembly("FeedbackWeb"));
             });
 
+            
+
             services.AddScoped<ICourseRepository, CourseRepository>();
             services.AddScoped<IFeedBackRepository, FeedbackRepository>();
+            services.AddScoped<ITeacherRepository, TeacherRepository>();
 
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.AddAutoMapper(typeof(CourseProfile));
             services.AddAutoMapper(typeof(FeedbackProfile));
+            services.AddAutoMapper(typeof(TeacherProfile));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -62,13 +67,14 @@ namespace FeedbackWeb
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
-                       name: "areaRoute year",
-                       pattern: "{area:exists}/{controller}/{action}/{id?}",
-                       defaults: new { controller = "Home", action = "Index" }
-                           );
+                name: "Student",
+                pattern: "{area=Student}/{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapControllerRoute(
-                    name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                //name: "Admin",
+                //pattern: "{area=Admin}/{controller=Home}/{action=Index}/{id?}");
+                //endpoints.MapControllerRoute(
+               name: "default",
+                pattern: "{controller=Home}/{action=Index}/{id?}");
             });
 
 

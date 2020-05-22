@@ -26,11 +26,17 @@ namespace FeedbackWeb.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<string>("CourseDescription")
+                        .HasColumnType("nvarchar(200)")
+                        .HasMaxLength(200);
+
                     b.Property<string>("CourseName")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(50)")
+                        .HasMaxLength(50);
 
-                    b.Property<int>("TeacherId")
+                    b.Property<int?>("TeacherId")
+                        .IsRequired()
                         .HasColumnType("int");
 
                     b.HasKey("CourseId");
@@ -79,16 +85,18 @@ namespace FeedbackWeb.Migrations
 
                     b.Property<string>("FeedbackWriterEmail")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(50)")
+                        .HasMaxLength(50);
 
                     b.Property<string>("FeedbackWriterName")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(50)")
+                        .HasMaxLength(50);
 
                     b.Property<string>("TheFeedback")
                         .IsRequired()
-                        .HasColumnType("nvarchar(1500)")
-                        .HasMaxLength(1500);
+                        .HasColumnType("nvarchar(1000)")
+                        .HasMaxLength(1000);
 
                     b.HasKey("FeedbackId");
 
@@ -141,56 +149,53 @@ namespace FeedbackWeb.Migrations
 
             modelBuilder.Entity("Feedback.Domain.Entities.Teacher", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("TeacherId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Email")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("FirstName")
                         .IsRequired()
                         .HasColumnType("nvarchar(50)")
                         .HasMaxLength(50);
 
-                    b.Property<string>("LastName")
+                    b.Property<string>("TeacherDescription")
+                        .HasColumnType("nvarchar(200)")
+                        .HasMaxLength(200);
+
+                    b.Property<string>("TeacherName")
                         .IsRequired()
                         .HasColumnType("nvarchar(50)")
                         .HasMaxLength(50);
 
-                    b.HasKey("Id");
+                    b.HasKey("TeacherId");
 
                     b.ToTable("Teachers");
 
                     b.HasData(
                         new
                         {
-                            Id = 1,
+                            TeacherId = 1,
                             Email = "ab@feedback.com",
-                            FirstName = "Alin",
-                            LastName = "Bradut"
+                            TeacherName = "Alin Bradut"
                         },
                         new
                         {
-                            Id = 2,
+                            TeacherId = 2,
                             Email = "lc@feedback.com",
-                            FirstName = "Larisa",
-                            LastName = "Costache"
+                            TeacherName = "Larisa Costache"
                         },
                         new
                         {
-                            Id = 3,
+                            TeacherId = 3,
                             Email = "gt@feedback.com",
-                            FirstName = "George",
-                            LastName = "Trifan"
+                            TeacherName = "George Trifan"
                         },
                         new
                         {
-                            Id = 4,
+                            TeacherId = 4,
                             Email = "on@feedback.com",
-                            FirstName = "Ovidiu",
-                            LastName = "Netoiu"
+                            TeacherName = "Ovidiu Netoiu"
                         });
                 });
 

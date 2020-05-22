@@ -25,30 +25,26 @@ namespace Feedback.Domain
             modelBuilder.Entity<Teacher>().HasData(
             new Teacher
             {
-                Id = 1,
-                FirstName = "Alin",
-                LastName = "Bradut",
+                TeacherId = 1,
+                TeacherName = "Alin Bradut",
                 Email = "ab@feedback.com"
             },
              new Teacher
              {
-                 Id = 2,
-                 FirstName = "Larisa",
-                 LastName = "Costache",
+                 TeacherId = 2,
+                 TeacherName = "Larisa Costache",
                  Email = "lc@feedback.com"
              },
             new Teacher
             {
-                Id = 3,
-                FirstName = "George",
-                LastName = "Trifan",
+                TeacherId = 3,
+                TeacherName = "George Trifan",
                 Email = "gt@feedback.com"
             },
              new Teacher
              {
-                 Id = 4,
-                 FirstName = "Ovidiu",
-                 LastName = "Netoiu",
+                 TeacherId = 4,
+                TeacherName = "Ovidiu Netoiu",
                  Email = "on@feedback.com"
              }
         );

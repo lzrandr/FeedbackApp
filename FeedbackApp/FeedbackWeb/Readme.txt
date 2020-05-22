@@ -13,3 +13,24 @@ it is your choice how you do this. You can create the database first, and then s
 - don't use the domain objects directly, use models
 - use repository pattern, and interfaces
 - add tests for at least one controller (edited) 
+
+Administrator:
+	- Couses 
+		-index - done logic
+		-create - done logic - look?
+		-edit - done logic - look?
+		-delete - done logic - look?
+	
+	- Teacher 
+		-index - done logic -look?
+		-create - done logic -look?
+		-edit - done logic -look?
+		-delete - done logic -look? 
+
+	- Feedbacks
+		-index for a course - partial - nu are filtrare dupa courseId -look?
+
+User:
+	- Feedbacks
+		- create for a course: logic done - look?
+

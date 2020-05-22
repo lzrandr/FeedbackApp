@@ -1,5 +1,7 @@
-﻿using Feedback.Domain;
+﻿using AutoMapper;
+using Feedback.Domain;
 using Feedback.Domain.Entities;
+using Feedback.Domain.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -12,6 +14,7 @@ namespace Feedback.Data
     public class FeedbackRepository : IFeedBackRepository
     {
         private FeedbackContext _context;
+        private  IMapper _mapper;
 
         public FeedbackRepository(FeedbackContext context)
         {
@@ -20,7 +23,7 @@ namespace Feedback.Data
 
         public IEnumerable<FeedBack> GetFeedback()
         {
-            return _context.Feedbacks.ToList();
+            return _context.Feedbacks.Include(c => c.Course).ToList();
         }
 
         //public FeedBack GetFeedbackById(int id)
@@ -29,19 +32,23 @@ namespace Feedback.Data
         //         .SingleOrDefault(c => c.Id == id);
         //}
 
-        public void CreateFeedback(FeedBack feedback)
+        public void CreateFeedback(FeedbackViewModel feedbackViewModel)
         {
-           
-                _context.Add(feedback);
-                _context.SaveChanges();
+            var feedback = new FeedBack();
+            feedback.CourseId = feedbackViewModel.CourseId;
+            feedback.TheFeedback = feedbackViewModel.TheFeedback;
+            feedback.FeedbackWriterName = feedbackViewModel.FeedbackWriterName;
+            feedback.FeedbackWriterEmail = feedbackViewModel.FeedbackWriterEmail;
+            _context.Add(feedback);
+            _context.SaveChanges();
 
         }
 
-
-
+      
         public void SaveChanges()
         {
             _context.SaveChanges();
+            
         }
 
         public IQueryable<Course> PopulateCoursesDropDownList()

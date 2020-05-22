@@ -1,6 +1,7 @@
 D:\GIT\FeedbackApp\FeedbackApp\Feedback.Services\bin\Debug\netstandard2.0\Feedback.Services.deps.json
 D:\GIT\FeedbackApp\FeedbackApp\Feedback.Services\bin\Debug\netstandard2.0\Feedback.Services.dll
 D:\GIT\FeedbackApp\FeedbackApp\Feedback.Services\bin\Debug\netstandard2.0\Feedback.Services.pdb
+D:\GIT\FeedbackApp\FeedbackApp\Feedback.Services\obj\Debug\netstandard2.0\Feedback.Services.csprojAssemblyReference.cache
 D:\GIT\FeedbackApp\FeedbackApp\Feedback.Services\obj\Debug\netstandard2.0\Feedback.Services.csproj.CoreCompileInputs.cache
 D:\GIT\FeedbackApp\FeedbackApp\Feedback.Services\obj\Debug\netstandard2.0\Feedback.Services.AssemblyInfoInputs.cache
 D:\GIT\FeedbackApp\FeedbackApp\Feedback.Services\obj\Debug\netstandard2.0\Feedback.Services.AssemblyInfo.cs

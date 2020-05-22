@@ -1,6 +1,16 @@
+C:\Users\QAZ\Downloads\FeedbackApp-branch1\FeedbackApp\Feedback.Domain\bin\Debug\netstandard2.0\Feedback.Domain.deps.json
+C:\Users\QAZ\Downloads\FeedbackApp-branch1\FeedbackApp\Feedback.Domain\bin\Debug\netstandard2.0\Feedback.Domain.dll
+C:\Users\QAZ\Downloads\FeedbackApp-branch1\FeedbackApp\Feedback.Domain\bin\Debug\netstandard2.0\Feedback.Domain.pdb
+C:\Users\QAZ\Downloads\FeedbackApp-branch1\FeedbackApp\Feedback.Domain\obj\Debug\netstandard2.0\Feedback.Domain.csprojAssemblyReference.cache
+C:\Users\QAZ\Downloads\FeedbackApp-branch1\FeedbackApp\Feedback.Domain\obj\Debug\netstandard2.0\Feedback.Domain.csproj.CoreCompileInputs.cache
+C:\Users\QAZ\Downloads\FeedbackApp-branch1\FeedbackApp\Feedback.Domain\obj\Debug\netstandard2.0\Feedback.Domain.AssemblyInfoInputs.cache
+C:\Users\QAZ\Downloads\FeedbackApp-branch1\FeedbackApp\Feedback.Domain\obj\Debug\netstandard2.0\Feedback.Domain.AssemblyInfo.cs
+C:\Users\QAZ\Downloads\FeedbackApp-branch1\FeedbackApp\Feedback.Domain\obj\Debug\netstandard2.0\Feedback.Domain.dll
+C:\Users\QAZ\Downloads\FeedbackApp-branch1\FeedbackApp\Feedback.Domain\obj\Debug\netstandard2.0\Feedback.Domain.pdb
 D:\GIT\FeedbackApp\FeedbackApp\Feedback.Domain\bin\Debug\netstandard2.0\Feedback.Domain.deps.json
 D:\GIT\FeedbackApp\FeedbackApp\Feedback.Domain\bin\Debug\netstandard2.0\Feedback.Domain.dll
 D:\GIT\FeedbackApp\FeedbackApp\Feedback.Domain\bin\Debug\netstandard2.0\Feedback.Domain.pdb
+D:\GIT\FeedbackApp\FeedbackApp\Feedback.Domain\obj\Debug\netstandard2.0\Feedback.Domain.csprojAssemblyReference.cache
 D:\GIT\FeedbackApp\FeedbackApp\Feedback.Domain\obj\Debug\netstandard2.0\Feedback.Domain.csproj.CoreCompileInputs.cache
 D:\GIT\FeedbackApp\FeedbackApp\Feedback.Domain\obj\Debug\netstandard2.0\Feedback.Domain.AssemblyInfoInputs.cache
 D:\GIT\FeedbackApp\FeedbackApp\Feedback.Domain\obj\Debug\netstandard2.0\Feedback.Domain.AssemblyInfo.cs

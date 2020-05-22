@@ -7,15 +7,24 @@ namespace Feedback.Domain.Entities
 {
     public partial class Teacher
     {
+        public Teacher()
+        {
+
+        }
         [Key]
-        public int Id { get; set; }
+        public int TeacherId { get; set; }
         [Required]
         [MaxLength(50)]
-        public string FirstName { get; set; }
+        [Display(Name = "Teacher Name")]
+
+        public string TeacherName { get; set; }
+        [MaxLength(200)]
+        [Display(Name = "Teacher Description")]
+        public string TeacherDescription { get; set; }
         [Required]
-        [MaxLength(50)]
-        public string LastName { get; set; }
         [EmailAddress]
+        [Display(Name = "Teacher Email")]
+        [MaxLength(50)]
         public string Email { get; set; }
     }
 }

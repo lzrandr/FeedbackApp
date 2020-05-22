@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using Feedback.Domain.Entities;
-using FeedbackWeb.Models;
+using Feedback.Domain.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;

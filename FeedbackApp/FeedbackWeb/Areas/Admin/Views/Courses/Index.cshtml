@@ -1,23 +1,56 @@
-﻿@using FeedbackWeb.Models
-@model IEnumerable<CourseViewModel>
+﻿@model IEnumerable<Feedback.Domain.Models.CourseViewModel>
+
+
 @{
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
 
-<div>
-    <ul style="display:inline">
-        @foreach (var courseitem in Model)
-        {
+<div class="container row p-0 m-0">
+    <div class="col-9">
+        <h2 class="text-info">Course List</h2>
+    </div>
+    <div class="col-3">
+        <a asp-action="Create" class="btn btn-info form-control text-white">Add a new Course</a>
+    </div>
+    <div class="col-12 border p-3 mt-3">
+        <form method="post">
 
-            <li>@courseitem.CourseName</li>
-            foreach (var feedbackitem in courseitem.FeedBacks)
-            {
-                feedbackitem.TheFeedback.ToString();
-            }
-        }
-    </ul>
-
-    
+            <table class="table table-striped border">
+                <thead>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.CourseName)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.CourseDescription)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Teacher.TeacherName)
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CourseName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CourseDescription)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Teacher.TeacherName)
+                        </td>
+                        <td>
+                            <a asp-area="Admin" asp-action="Delete" asp-route-id="@item.CourseId" class="btn-danger btn-sm">Delete</a>
+                            <a asp-area="Admin" asp-action="Edit" asp-route-id="@item.CourseId" class="btn btn-success btn-sm text-white">Edit</a>
+                        </td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </form>
+    </div>
 </div>

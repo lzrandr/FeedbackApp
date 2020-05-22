@@ -1,4 +1,5 @@
 ﻿using Feedback.Domain.Entities;
+using Feedback.Domain.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +11,7 @@ namespace Feedback.Data
     {
         IEnumerable<FeedBack> GetFeedback();
         //Course GetFeedbackById(int id);
-        void CreateFeedback(FeedBack feedback);
+        void CreateFeedback(FeedbackViewModel feedbackViewModel);
         void SaveChanges();
         IQueryable<Course> PopulateCoursesDropDownList();
 

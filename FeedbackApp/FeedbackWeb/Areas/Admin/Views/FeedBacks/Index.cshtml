@@ -1,0 +1,54 @@
+﻿@model IEnumerable<Feedback.Domain.Models.FeedbackViewModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="container row p-0 m-0">
+    <div class="col-9">
+        <h2 class="text-info">Feedback List</h2>
+    </div>
+    <div class="col-12 border p-3 mt-3">
+        <form method="post">
+
+
+            <table class="table table-striped border">
+                <thead>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.CourseId)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.FeedbackWriterName)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.FeedbackWriterEmail)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.TheFeedback)
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Course.CourseName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.FeedbackWriterName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.FeedbackWriterEmail)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.TheFeedback)
+                            </td>
+                        </tr>
+                     }
+                </tbody>
+            </table>
+        </form>
+    </div>
+</div>
